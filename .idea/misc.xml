@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable-xxxhdpi/custom_btn_white.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/bg_radius_top_20dp_white.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/custom_btn_primary.xml" value="0.134" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/custom_btn_red.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/custom_edttext.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/custom_edttext_grey.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/custome_edt_active.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/custome_edt_unactive.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_add.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_arrow_circle_right.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_cancel.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_dit_note.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_hide_password.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_history.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_icon_password.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_image.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_pencil.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/ic_show_password.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/onboarding_indicator_active.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/onboarding_indicator_inactive.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/drawable/rounded_dialog.xml" value="0.1" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_about.xml" value="0.17" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_add_baby.xml" value="0.17" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_baby.xml" value="0.21" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_edit_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_forget_password.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_hasil_actvity.xml" value="0.1175925925925926" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_main.xml" value="0.10648148148148148" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_question.xml" value="0.18" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/bottom_sheet_rules.xml" value="0.17" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/fragment_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/fragment_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/fragment_home.xml" value="0.10648148148148148" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/fragment_notifications.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/fragment_profile.xml" value="0.10648148148148148" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_baby.xml" value="0.18" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_dialog.xml" value="0.10648148148148148" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_question.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/menu/bottom_nav_menu.xml" value="0.10648148148148148" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

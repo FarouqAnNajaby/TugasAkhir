@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">BabyCare</string>
+    <string name="hint_email">Masukkan email</string>
+    <string name="hint_password">Masukkan password</string>
+    <string name="hint_password_kembali">Masukkan password kembali</string>
+    <string name="title_create_account">Buat Akun</string>
+    <string name="title_no_have_account">Belum memiliki akun?</string>
+    <string name="title_login">Masuk</string>
+    <string name="forgot_pass">Lupa password?</string>
+    <string name="hint_name">Masukkan nama</string>
+    <string name="hint_telepon">Masukkan nomor telepon</string>
+    <string name="title_have_account">Sudah punya akun?</string>
+    <string name="title_register">Daftar</string>
+    <string name="title_password_different">Password tidak sama</string>
+    <string name="loading">Loading...</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_start_diagnosa">Mulai diagnosa</string>
+    <string name="title_education">Edukasi</string>
+    <string name="title_profile">Profil</string>
+    <string name="title_add_photo">+Tambah foto</string>
+    <string name="desc_about">Aplikasi ini dibuat oleh Farouq An Najaby untuk mendeteksi jenis penyakit demam pada balita</string>
+    <string name="title_logout">Keluar</string>
+    <string name="title_about_us">Tentang aplikasi</string>
+    <string name="title_ubah_profile">Ubah profil</string>
+    <string name="title_ubah_sandi">Ubah sandi</string>
+    <string name="title_confirm_logout">Apakah anda yakin ingin keluar?</string>
+    <string name="title_yes">Oke</string>
+    <string name="title_no">Tidak</string>
+    <string name="title_history">Riwayat</string>
+    <string name="title_rules">Aturan diagnosa</string>
+    <string name="title_aturan_desc">Tes Diagnosa digunakan untuk mencari jenis penyakit demam yang dialami balita berdasarkan fakta atau data dari pakar</string>
+    <string name="title_cara_diagnosa">Cara melakukan diagnosa :</string>
+    <string name="title_aturan_1">1. Terdapat beberapa pertanyaan dan anda diminta menentukan apakah gejala tersebut dirasakan balita anda.</string>
+    <string name="title_aturan_2">2. Temukan posisi yang nyaman dan pastikan tidak ada aktivitas lain.</string>
+    <string name="title_aturan_3">3. Jawablah setiap pertanyaan dengan jujur.</string>
+    <string name="title_aturan_4">4. Setiap pertanyaan hanya bisa dijawab SATU KALI.</string>
+    <string name="title_start">Mulai</string>
+    <string name="title_add_baby">Daftarkan bayi anda</string>
+    <string name="title_add">Tambah</string>
+    <string name="hint_tgl">Masukkan tanggal lahir</string>
+    <string name="hint_name_baby">Masukkan nama bayi</string>
+    <string name="title_laki">Laki - Laki</string>
+    <string name="title_perempuan">Perempuan</string>
+    <string name="title_tambah_baby">Tambah Bayi</string>
+    <string name="question1">Apakah mengalami batuk?</string>
+    <string name="question2">Apakah balita mengalami pilek?</string>
+    <string name="question3">Apakah balita mengalami mata merah?</string>
+
+
+</resources>
