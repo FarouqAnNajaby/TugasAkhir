@@ -86,4 +86,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         Intent intent = new Intent(requireActivity(), EditProfileActivity.class);
         requireActivity().startActivity(intent);
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setView();
+    }
 }

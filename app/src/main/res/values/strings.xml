@@ -45,9 +45,24 @@
     <string name="title_laki">Laki - Laki</string>
     <string name="title_perempuan">Perempuan</string>
     <string name="title_tambah_baby">Tambah Bayi</string>
-    <string name="question1">Apakah mengalami batuk?</string>
-    <string name="question2">Apakah balita mengalami pilek?</string>
-    <string name="question3">Apakah balita mengalami mata merah?</string>
+    <string name="question1">Apakah mengalami batuk</string>
+    <string name="question2">Apakah balita mengalami pilek</string>
+    <string name="question3">Apakah balita mengalami mata merah</string>
+    <string name="question4">Ruam kemerahan menyeluruh berisi air</string>
+    <string name="question5">Tanda Bahaya Umum</string>
+    <string name="question6">Kaku Kuduk</string>
+    <string name="question7">Usia kurang dari 3 bulan</string>
+    <string name="question8">Korne mata keruh</string>
+    <string name="question9">Luka dimulut luas atau dalam</string>
+    <string name="question10">Ada nanah pada mata</string>
+    <string name="question11">Luka pada mulut</string>
+    <string name="question12">Tanda Syok</string>
+    <string name="question13">Nyeri ulu pada hati</string>
+    <string name="question14">Muntah</string>
+    <string name="question15">Pendarahan pada kulit atau BAB</string>
+    <string name="question16">Demam mendadak tinggi terus menerus</string>
+    <string name="diagnosa">Diagnosa</string>
+    <string name="title_no_data">Data Kosong</string>
 
 
 </resources>

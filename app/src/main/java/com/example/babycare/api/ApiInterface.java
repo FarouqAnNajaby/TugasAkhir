@@ -1,12 +1,19 @@
 package com.example.babycare.api;
 
+import com.example.babycare.model.AnswerQuestion;
+import com.example.babycare.model.DataDiagnosa;
+import com.example.babycare.model.ResponseDiagnosa;
 import com.example.babycare.model.ResponseGetBaby;
 import com.example.babycare.model.ResponseLogin;
+import com.example.babycare.model.ResponseUpdateProfile;
 import com.example.babycare.model.UserResponse;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface ApiInterface {
@@ -35,7 +42,7 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("update_user.php")
-    Call<ResponseLogin> toUpdateUser(
+    Call<ResponseUpdateProfile> toUpdateUser(
             @Field("name_user") String name_user,
             @Field("email_user") String email_user,
             @Field("password_user") String password_user
@@ -54,5 +61,16 @@ public interface ApiInterface {
     @POST("retrieve_baby.php")
     Call<ResponseGetBaby> toGetBaby(
             @Field("id_user") String id_user
+    );
+
+    @Headers({"Content-Type: application/json", "X-Requested-With: XMLHttpRequest"})
+    @POST("medical-temp")
+    Call<UserResponse> toDiagnosa(
+            @Body AnswerQuestion answerQuestion
+    );
+
+    @GET("process-method")
+    Call<ResponseDiagnosa> toProcessDiagnosa(
+
     );
 }

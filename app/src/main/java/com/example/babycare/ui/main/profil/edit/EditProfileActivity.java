@@ -14,6 +14,7 @@ import com.example.babycare.R;
 import com.example.babycare.databinding.ActivityEditProfileBinding;
 import com.example.babycare.helper.DbHelper;
 import com.example.babycare.model.ResponseLogin;
+import com.example.babycare.model.ResponseUpdateProfile;
 import com.example.babycare.ui.main.profil.edit.presenter.EditProfilPresenter;
 import com.example.babycare.utils.Constanta;
 import com.example.babycare.utils.Loading;
@@ -84,7 +85,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
-    public void updateUser(Response<ResponseLogin> response) {
+    public void updateUser(Response<ResponseUpdateProfile> response) {
         if (response.body() != null) {
             switch(response.body().getKode()) {
                 case 0:
@@ -93,10 +94,10 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                 case 1:
                     loading.dialogSuccess("Ubah Profile", "Sukses");;
                     saveUserID(
-                            response.body().getData().getIdUser(),
-                            response.body().getData().getNameUser(),
-                            response.body().getData().getEmailUser(),
-                            response.body().getData().getPasswordUser()
+                            response.body().getUser().getIdUser(),
+                            response.body().getUser().getNameUser(),
+                            response.body().getUser().getEmailUser(),
+                            response.body().getUser().getPasswordUser()
                     );
                     break;
                 default:

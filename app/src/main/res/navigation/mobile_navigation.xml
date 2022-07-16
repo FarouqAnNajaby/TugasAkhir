@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_history"
-        android:name="com.example.babycare.ui.main.education.EducationFragment"
+        android:name="com.example.babycare.ui.main.history.HistoryFragment"
         android:label="@string/title_history"
         tools:layout="@layout/fragment_history" />
 

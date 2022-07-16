@@ -22,4 +22,18 @@ public class ApiClient {
                 .build();
         return retrofit.create(ApiInterface.class);
     }
+
+    public static ApiInterface getApiServiceLaravel() {
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor()
+                .setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(loggingInterceptor)
+                .build();
+        Retrofit retrofit = new retrofit2.Retrofit.Builder()
+                .baseUrl(Constanta.BASE_URL_LARAVEL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
+                .build();
+        return retrofit.create(ApiInterface.class);
+    }
 }

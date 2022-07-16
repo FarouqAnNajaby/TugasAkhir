@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.example.babycare.api.ApiClient;
 import com.example.babycare.model.ResponseLogin;
+import com.example.babycare.model.ResponseUpdateProfile;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 import retrofit2.Call;
@@ -24,16 +25,16 @@ public class EditProfilPresenter {
     }
 
     public interface View {
-        void updateUser(Response<ResponseLogin> response);
+        void updateUser(Response<ResponseUpdateProfile> response);
     }
 
     public void onUpdate(String name, String email, String password){
 
-        Call<ResponseLogin> login = ApiClient.getApiService().toUpdateUser(name,email, password);
+        Call<ResponseUpdateProfile> login = ApiClient.getApiService().toUpdateUser(name,email, password);
 
-        login.enqueue(new Callback<ResponseLogin>() {
+        login.enqueue(new Callback<ResponseUpdateProfile>() {
             @Override
-            public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response) {
+            public void onResponse(Call<ResponseUpdateProfile> call, Response<ResponseUpdateProfile> response) {
                 try {
                     view.updateUser(response);
                 }catch (Exception e){
@@ -42,7 +43,7 @@ public class EditProfilPresenter {
             }
 
             @Override
-            public void onFailure(Call<ResponseLogin> call, Throwable t) {
+            public void onFailure(Call<ResponseUpdateProfile> call, Throwable t) {
                 FancyToast.makeText(context, "Gagal Menghubungi Server | "
                                 +t.getMessage(), FancyToast.LENGTH_LONG, FancyToast.WARNING,
                         false).show();

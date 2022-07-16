@@ -41,7 +41,7 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.MyViewHolder> 
             holder.binding.tvUmur.setText("3 Tahun");
             holder.itemView.setOnClickListener(v->{
                 Intent intent = new Intent(context, QuestionActivity.class);
-                intent.putExtra(QuestionActivity.UMUR, data.getDateBirthBaby());
+                intent.putExtra(QuestionActivity.ID_BABY, data.getIdBaby());
                 context.startActivity(intent);
             });
         } catch (Exception e) {

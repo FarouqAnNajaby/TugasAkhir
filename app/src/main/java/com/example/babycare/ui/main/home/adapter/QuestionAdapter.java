@@ -2,14 +2,12 @@ package com.example.babycare.ui.main.home.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.babycare.databinding.ItemBabyBinding;
 import com.example.babycare.databinding.ItemQuestionBinding;
 import com.example.babycare.model.Question;
 import com.example.babycare.ui.main.home.contract.HomeContract;
