@@ -30,7 +30,7 @@
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_baby.xml" value="0.21" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_edit_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_forget_password.xml" value="0.20416666666666666" />
-        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_hasil_actvity.xml" value="0.1175925925925926" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_hasil_actvity.xml" value="0.25" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/activity_main.xml" value="0.10648148148148148" />
@@ -45,6 +45,7 @@
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/fragment_profile.xml" value="0.10648148148148148" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_baby.xml" value="0.18" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_dialog.xml" value="0.10648148148148148" />
+        <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_gejala_solusi.xml" value="0.203125" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_question.xml" value="0.20416666666666666" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/item_youtube.xml" value="0.1175925925925926" />
         <entry key="..\:/Kuliah/Kotlin/TugasAkhir/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />

@@ -63,6 +63,12 @@
     <string name="question16">Demam mendadak tinggi terus menerus</string>
     <string name="diagnosa">Diagnosa</string>
     <string name="title_no_data">Data Kosong</string>
+    <string name="name_baby">Nama Bayi</string>
+    <string name="sex_baby">Jenis Kelamin</string>
+    <string name="age_baby">Umur</string>
+    <string name="penyakit_baby">Jenis Penyakit</string>
+    <string name="gejala_baby">Gejala yang dialami</string>
+    <string name="solution_baby">Cara Penanganan</string>
 
 
 </resources>
