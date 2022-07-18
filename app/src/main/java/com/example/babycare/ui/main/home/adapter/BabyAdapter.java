@@ -37,8 +37,7 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.MyViewHolder> 
         try {
             Baby data = babyList.get(position);
             holder.binding.tvNama.setText(data.getNameBaby());
-//            holder.binding.tvUmur.setText(calculateAge(data.getDateBirthBaby()));
-            holder.binding.tvUmur.setText("3 Tahun");
+            holder.binding.tvUmur.setText(data.getAge()+" Tahun");
             holder.itemView.setOnClickListener(v->{
                 Intent intent = new Intent(context, QuestionActivity.class);
                 intent.putExtra(QuestionActivity.ID_BABY, data.getIdBaby());

@@ -9,9 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.babycare.R;
 import com.example.babycare.databinding.FragmentHistoryBinding;
-import com.example.babycare.databinding.FragmentProfileBinding;
 
 public class HistoryFragment extends Fragment {
 
@@ -21,7 +19,7 @@ public class HistoryFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static HistoryFragment newInstance(String param1, String param2) {
+    public static HistoryFragment newInstance() {
         return new HistoryFragment();
     }
 
@@ -39,5 +37,7 @@ public class HistoryFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+
 
 }

@@ -1,7 +1,7 @@
 package com.example.babycare.api;
 
 import com.example.babycare.model.AnswerQuestion;
-import com.example.babycare.model.DataDiagnosa;
+import com.example.babycare.model.Baby;
 import com.example.babycare.model.ResponseDiagnosa;
 import com.example.babycare.model.ResponseGetBaby;
 import com.example.babycare.model.ResponseLogin;
@@ -57,6 +57,12 @@ public interface ApiInterface {
             @Field("id_user") String id_user
     );
 
+    @Headers({"Content-Type: application/json", "X-Requested-With: XMLHttpRequest"})
+    @POST("store-baby")
+    Call<UserResponse> toAddBaby(
+            @Body Baby baby
+    );
+
     @FormUrlEncoded
     @POST("retrieve_baby.php")
     Call<ResponseGetBaby> toGetBaby(
@@ -66,6 +72,12 @@ public interface ApiInterface {
     @Headers({"Content-Type: application/json", "X-Requested-With: XMLHttpRequest"})
     @POST("medical-temp")
     Call<UserResponse> toDiagnosa(
+            @Body AnswerQuestion answerQuestion
+    );
+
+    @Headers({"Content-Type: application/json", "X-Requested-With: XMLHttpRequest"})
+    @GET("list-history")
+    Call<UserResponse> toGeListHistory(
             @Body AnswerQuestion answerQuestion
     );
 

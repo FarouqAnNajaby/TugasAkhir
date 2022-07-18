@@ -5,6 +5,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class ResponseDiagnosa{
 
+	@SerializedName("status_code")
+	private int statusCode;
+
 	@SerializedName("data")
 	private List<DataDiagnosa> data;
 
@@ -13,6 +16,14 @@ public class ResponseDiagnosa{
 
 	@SerializedName("uuid")
 	private String uuid;
+
+	public void setStatusCode(int statusCode){
+		this.statusCode = statusCode;
+	}
+
+	public int getStatusCode(){
+		return statusCode;
+	}
 
 	public void setData(List<DataDiagnosa> data){
 		this.data = data;
@@ -42,7 +53,8 @@ public class ResponseDiagnosa{
  	public String toString(){
 		return 
 			"ResponseDiagnosa{" + 
-			"data = '" + data + '\'' + 
+			"status_code = '" + statusCode + '\'' + 
+			",data = '" + data + '\'' + 
 			",message = '" + message + '\'' + 
 			",uuid = '" + uuid + '\'' + 
 			"}";

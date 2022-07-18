@@ -13,8 +13,22 @@ public class Baby {
 	@SerializedName("name_baby")
 	private String nameBaby;
 
+	@SerializedName("id_user")
+	private String idUser;
+
+	@SerializedName("age")
+	private String age;
+
 	@SerializedName("date_birth_baby")
 	private String dateBirthBaby;
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
 
 	public void setIdBaby(String idBaby){
 		this.idBaby = idBaby;
@@ -48,14 +62,23 @@ public class Baby {
 		return dateBirthBaby;
 	}
 
+	public String getIdUser() {
+		return idUser;
+	}
+
+	public void setIdUser(String idUser) {
+		this.idUser = idUser;
+	}
+
 	@Override
- 	public String toString(){
-		return 
-			"DataItem{" + 
-			"id_baby = '" + idBaby + '\'' + 
-			",sex_baby = '" + sexBaby + '\'' + 
-			",name_baby = '" + nameBaby + '\'' + 
-			",date_birth_baby = '" + dateBirthBaby + '\'' + 
-			"}";
-		}
+	public String toString() {
+		return "Baby{" +
+				"idBaby='" + idBaby + '\'' +
+				", sexBaby='" + sexBaby + '\'' +
+				", nameBaby='" + nameBaby + '\'' +
+				", idUser='" + idUser + '\'' +
+				", age='" + age + '\'' +
+				", dateBirthBaby='" + dateBirthBaby + '\'' +
+				'}';
+	}
 }

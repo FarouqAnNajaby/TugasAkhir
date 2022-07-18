@@ -1,8 +1,16 @@
 package com.example.babycare.model;
 
 public class Question {
-    String Title, id;
+    String Title, id, no;
     int ScreenImg;
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
 
     public String getId() {
         return id;

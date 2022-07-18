@@ -17,18 +17,8 @@ public class DataDiagnosa {
 	@SerializedName("id_user")
 	private String idUser;
 
-	@SerializedName("id_gejala")
-	private List<String> idgejala;
-
-	public DataDiagnosa(String idBaby, String idUser, List<String> gejala) {
-		this.idBaby = idBaby;
-		this.idUser = idUser;
-		this.idgejala = gejala;
-	}
-
-	public DataDiagnosa() {
-
-	}
+	@SerializedName("gejala")
+	private List<String> gejala;
 
 	public void setIdBaby(String idBaby){
 		this.idBaby = idBaby;
@@ -63,22 +53,22 @@ public class DataDiagnosa {
 	}
 
 	public void setGejala(List<String> gejala){
-		this.idgejala = gejala;
+		this.gejala = gejala;
 	}
 
 	public List<String> getGejala(){
-		return idgejala;
+		return gejala;
 	}
 
 	@Override
  	public String toString(){
-		return
-			"DataItem{" +
-			"id_baby = '" + idBaby + '\'' +
-			",penyakit = '" + penyakit + '\'' +
-			",solusi = '" + solusi + '\'' +
-			",id_user = '" + idUser + '\'' +
-			",gejala = '" + idgejala + '\'' +
+		return 
+			"DataItem{" + 
+			"id_baby = '" + idBaby + '\'' + 
+			",penyakit = '" + penyakit + '\'' + 
+			",solusi = '" + solusi + '\'' + 
+			",id_user = '" + idUser + '\'' + 
+			",gejala = '" + gejala + '\'' + 
 			"}";
 		}
 }

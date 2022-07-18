@@ -4,37 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.babycare.R;
 import com.example.babycare.api.ApiClient;
 import com.example.babycare.databinding.ActivityQuestionBinding;
 import com.example.babycare.helper.DbHelper;
 import com.example.babycare.model.AnswerQuestion;
-import com.example.babycare.model.DataDiagnosa;
 import com.example.babycare.model.Question;
-import com.example.babycare.model.ResponseDiagnosa;
-import com.example.babycare.model.ResponseLogin;
 import com.example.babycare.model.UserResponse;
 import com.example.babycare.ui.main.home.adapter.QuestionAdapter;
 import com.example.babycare.ui.main.home.contract.HomeContract;
 import com.example.babycare.ui.main.home.hasil.HasilActvity;
 import com.example.babycare.utils.Constanta;
-import com.google.gson.Gson;
-import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,15 +36,11 @@ public class QuestionActivity extends AppCompatActivity implements HomeContract 
 
     public static final String ID_BABY = "id";
     static ActivityQuestionBinding binding;
-    private int currentQuestionIndex = 0;
-    private TextView questionTextView;
     private ImageView Image;
     static QuestionAdapter adapter;
     static DbHelper dbHelper;
     Intent intent;
-//    static List<AnswerQuestion> answeredQuestion = new ArrayList<>();
     static List<String> trueTemp = new ArrayList<>();
-    DataDiagnosa dataDiagnosa;
     AnswerQuestion answerQuestion;
 
     @Override
@@ -135,69 +120,85 @@ public class QuestionActivity extends AppCompatActivity implements HomeContract 
         List<Question> onBoardingItems = new ArrayList<>();
 
         Question boarding = new Question();
+        boarding.setNo("Pertanyaan 1");
         boarding.setId("G001");
         boarding.setTitle(getResources().getString(R.string.question1));
         boarding.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding1 = new Question();
+        boarding1.setNo("Pertanyaan 2");
         boarding1.setId("G002");
         boarding1.setTitle(getResources().getString(R.string.question2));
         boarding1.setScreenImg(R.drawable.icon_diagnosa);
 
         Question boarding2 = new Question();
+        boarding2.setNo("Pertanyaan 3");
         boarding2.setId("G003");
         boarding2.setTitle(getResources().getString(R.string.question3));
         boarding2.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding3 = new Question();
+        boarding3.setNo("Pertanyaan 4");
         boarding3.setId("G004");
         boarding3.setTitle(getResources().getString(R.string.question4));
 
         Question boarding4 = new Question();
+        boarding4.setNo("Pertanyaan 5");
         boarding4.setId("G005");
         boarding4.setTitle(getResources().getString(R.string.question5));
 
         Question boarding5 = new Question();
+        boarding5.setNo("Pertanyaan 6");
         boarding5.setId("G006");
         boarding5.setTitle(getResources().getString(R.string.question6));
 
         Question boarding6 = new Question();
+        boarding6.setNo("Pertanyaan 7");
         boarding6.setId("G007");
         boarding6.setTitle(getResources().getString(R.string.question7));
 
         Question boarding7 = new Question();
+        boarding7.setNo("Pertanyaan 8");
         boarding7.setId("G008");
         boarding7.setTitle(getResources().getString(R.string.question8));
 
         Question boarding8 = new Question();
+        boarding8.setNo("Pertanyaan 9");
         boarding8.setId("G009");
         boarding8.setTitle(getResources().getString(R.string.question9));
 
         Question boarding9 = new Question();
+        boarding9.setNo("Pertanyaan 10");
         boarding9.setId("G010");
         boarding9.setTitle(getResources().getString(R.string.question10));
 
         Question boarding10 = new Question();
+        boarding10.setNo("Pertanyaan 11");
         boarding10.setId("G011");
         boarding10.setTitle(getResources().getString(R.string.question11));
 
         Question boarding11 = new Question();
+        boarding11.setNo("Pertanyaan 12");
         boarding11.setId("G012");
         boarding11.setTitle(getResources().getString(R.string.question12));
 
         Question boarding12 = new Question();
+        boarding12.setNo("Pertanyaan 13");
         boarding12.setId("G013");
         boarding12.setTitle(getResources().getString(R.string.question13));
 
         Question boarding13 = new Question();
+        boarding13.setNo("Pertanyaan 14");
         boarding13.setId("G014");
         boarding13.setTitle(getResources().getString(R.string.question14));
 
         Question boarding14 = new Question();
+        boarding14.setNo("Pertanyaan 15");
         boarding14.setId("G015");
         boarding14.setTitle(getResources().getString(R.string.question15));
 
         Question boarding15 = new Question();
+        boarding15.setNo("Pertanyaan 16");
         boarding15.setId("G016");
         boarding15.setTitle(getResources().getString(R.string.question16));
 
@@ -237,14 +238,10 @@ public class QuestionActivity extends AppCompatActivity implements HomeContract 
         if (binding.vpQuestion.getCurrentItem() + 1 < adapter.getItemCount()) {
             binding.vpQuestion.setCurrentItem(binding.vpQuestion.getCurrentItem() + 1);
         } else {
-            dataDiagnosa = new DataDiagnosa();
             answerQuestion = new AnswerQuestion();
             answerQuestion.setId_baby(dbHelper.getString(Constanta.PREF_ID_BABY));
             answerQuestion.setId_user(dbHelper.getString(Constanta.PREF_ID));
             answerQuestion.setId_gejala(trueTemp);
-//            dataDiagnosa.setIdBaby(dbHelper.getString(Constanta.PREF_ID_BABY));
-//            dataDiagnosa.setIdUser(dbHelper.getString(Constanta.PREF_ID));
-//            dataDiagnosa.setGejala(trueTemp);
             onDiagnosa(answerQuestion);
             binding.btnOnBoarding.setVisibility(View.VISIBLE);
         }

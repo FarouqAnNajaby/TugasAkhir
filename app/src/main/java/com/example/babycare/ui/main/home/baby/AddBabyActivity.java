@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.example.babycare.R;
 import com.example.babycare.databinding.ActivityAddBabyBinding;
 import com.example.babycare.helper.DbHelper;
+import com.example.babycare.model.Baby;
 import com.example.babycare.model.ResponseGetBaby;
 import com.example.babycare.model.UserResponse;
 import com.example.babycare.ui.main.home.baby.presenter.BabyPresenter;
@@ -28,6 +30,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import retrofit2.Response;
 
 public class AddBabyActivity extends AppCompatActivity implements View.OnClickListener,
@@ -38,6 +41,8 @@ public class AddBabyActivity extends AppCompatActivity implements View.OnClickLi
     Loading loading;
     DbHelper dbHelper;
     Date date = null;
+    Baby baby;
+    SweetAlertDialog dialog;
     String idUser, name, tanggal, kelamin;
     BabyPresenter presenter;
     private final String FIELD_REQUIRED = "Field tidak boleh kosong";
@@ -120,15 +125,36 @@ public class AddBabyActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void addBaby(Response<UserResponse> response) {
         if (response.body() != null) {
-            switch(response.body().getKode()) {
-                case 0:
-                    loading.dialogError("Tambah Bayi","Gagal");
-                    break;
-                case 1:
-                    loading.dialogSuccess("Tambah Bayi", "Sukses");
+//            switch(response.body().getKode()) {
+//                case 0:
+//                    loading.dialogError("Tambah Bayi","Gagal");
+//                    break;
+//                case 1:
+//                    loading.dialogSuccess("Tambah Bayi", "Sukses");
+//                    goBaby();
+//                    break;
+//            }
+            if (response.body().getMessage().contains("Sucessfully")){
+                dialog = new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE);
+                dialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+                dialog.setTitleText("Tambah Bayi");
+                dialog.setContentText("Sukses");
+                dialog.setCancelable(false);
+                dialog.setConfirmClickListener(sweetAlertDialog -> {
                     goBaby();
-                    break;
+                    dialog.dismiss();
+                });
+            }else {
+                dialog = new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE);
+                dialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+                dialog.setTitleText("Tambah Bayi");
+                dialog.setContentText("Gagal");
+                dialog.setCancelable(false);
+                dialog.setConfirmClickListener(sweetAlertDialog -> {
+                    dialog.dismiss();
+                });
             }
+            dialog.show();
         }
     }
 
@@ -159,7 +185,13 @@ public class AddBabyActivity extends AppCompatActivity implements View.OnClickLi
             loading.dialogWarning("Tambah Bayi", "Harap isi Tanggal Lahir");
             return;
         }
-        presenter.onUpdate(name,tanggal,kelamin,idUser);
+        baby = new Baby();
+        baby.setNameBaby(name);
+        baby.setSexBaby(kelamin);
+        baby.setDateBirthBaby(tanggal);
+        baby.setIdUser(dbHelper.getString(Constanta.PREF_ID));
+
+        presenter.onUpdate(baby);
     }
 
     public void onRadioButtonClicked(@NonNull View view) {

@@ -41,6 +41,7 @@ public class QuestionAdapter extends RecyclerView.Adapter<QuestionAdapter.ViewHo
                 .load(question.getScreenImg())
                 .into(holder.binding.imgOnBoarding);
         holder.binding.tvTitle.setText(question.getTitle());
+        holder.binding.tvNo.setText(question.getNo());
         QuestionActivity a = new QuestionActivity();
         homeContract = (HomeContract) a;
         holder.binding.btnYa.setOnClickListener(v -> {
