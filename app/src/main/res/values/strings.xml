@@ -62,6 +62,9 @@
     <string name="question15">Pendarahan pada kulit atau BAB</string>
     <string name="question16">Demam mendadak tinggi terus menerus</string>
     <string name="diagnosa">Diagnosa</string>
+    <string name="question">Pertanyaan</string>
+    <string name="list_baby">Daftar Balita</string>
+    <string name="hasil">Hasil Diagnosa</string>
     <string name="title_no_data">Data Kosong</string>
     <string name="name_baby">Nama Bayi</string>
     <string name="sex_baby">Jenis Kelamin</string>
@@ -69,6 +72,9 @@
     <string name="penyakit_baby">Jenis Penyakit</string>
     <string name="gejala_baby">Gejala yang dialami</string>
     <string name="solution_baby">Cara Penanganan</string>
+    <string name="data_kosong">Data Kosong</string>
+    <string name="diagnosa_not_found">Jenis Penyakit Tidak Ditemukan</string>
+    <string name="ayo_diagnosa">Lakukan Dignosa jenis demam pada balita anda dengan Mandiri</string>
 
 
 </resources>

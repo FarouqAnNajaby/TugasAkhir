@@ -8,6 +8,8 @@ import com.example.babycare.model.ResponseLogin;
 import com.example.babycare.model.ResponseUpdateProfile;
 import com.example.babycare.model.UserResponse;
 
+import java.util.Map;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -15,6 +17,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.QueryMap;
 
 public interface ApiInterface {
 
@@ -75,14 +78,23 @@ public interface ApiInterface {
             @Body AnswerQuestion answerQuestion
     );
 
-    @Headers({"Content-Type: application/json", "X-Requested-With: XMLHttpRequest"})
     @GET("list-history")
-    Call<UserResponse> toGeListHistory(
-            @Body AnswerQuestion answerQuestion
+    Call<ResponseDiagnosa> toGeListHistory(
+            @QueryMap Map<String, String> options
+    );
+
+    @GET("history")
+    Call<ResponseDiagnosa> toDetilHistory(
+            @QueryMap Map<String, String> options
     );
 
     @GET("process-method")
     Call<ResponseDiagnosa> toProcessDiagnosa(
 
+    );
+
+    @GET("destroy-baby")
+    Call<ResponseDiagnosa> toDeleteBaby(
+            @QueryMap Map<String, String> options
     );
 }

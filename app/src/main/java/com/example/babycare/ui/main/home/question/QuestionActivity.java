@@ -50,7 +50,7 @@ public class QuestionActivity extends AppCompatActivity implements HomeContract 
         setContentView(binding.getRoot());
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(getResources().getString(R.string.diagnosa));
+        getSupportActionBar().setTitle(getResources().getString(R.string.question));
 
         intent = getIntent();
         dbHelper = new DbHelper(this);
@@ -75,7 +75,9 @@ public class QuestionActivity extends AppCompatActivity implements HomeContract 
 
         binding.btnOnBoarding.setOnClickListener(v->{
             intent = new Intent(this,HasilActvity.class);
+            intent.putExtra(HasilActvity.LABEL,"question");
             startActivity(intent);
+            finish();
         });
     }
 
@@ -141,66 +143,79 @@ public class QuestionActivity extends AppCompatActivity implements HomeContract 
         boarding3.setNo("Pertanyaan 4");
         boarding3.setId("G004");
         boarding3.setTitle(getResources().getString(R.string.question4));
+        boarding3.setScreenImg(R.drawable.icon_diagnosa);
 
         Question boarding4 = new Question();
         boarding4.setNo("Pertanyaan 5");
         boarding4.setId("G005");
         boarding4.setTitle(getResources().getString(R.string.question5));
+        boarding4.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding5 = new Question();
         boarding5.setNo("Pertanyaan 6");
         boarding5.setId("G006");
         boarding5.setTitle(getResources().getString(R.string.question6));
+        boarding5.setScreenImg(R.drawable.icon_diagnosa);
 
-        Question boarding6 = new Question();
-        boarding6.setNo("Pertanyaan 7");
-        boarding6.setId("G007");
-        boarding6.setTitle(getResources().getString(R.string.question7));
+//        Question boarding6 = new Question();
+//        boarding6.setNo("Pertanyaan 6");
+//        boarding6.setId("G007");
+//        boarding6.setTitle(getResources().getString(R.string.question7));
+//        boarding6.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding7 = new Question();
-        boarding7.setNo("Pertanyaan 8");
+        boarding7.setNo("Pertanyaan 7");
         boarding7.setId("G008");
         boarding7.setTitle(getResources().getString(R.string.question8));
+        boarding7.setScreenImg(R.drawable.icon_diagnosa);
 
         Question boarding8 = new Question();
-        boarding8.setNo("Pertanyaan 9");
+        boarding8.setNo("Pertanyaan 8");
         boarding8.setId("G009");
         boarding8.setTitle(getResources().getString(R.string.question9));
+        boarding8.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding9 = new Question();
-        boarding9.setNo("Pertanyaan 10");
+        boarding9.setNo("Pertanyaan 9");
         boarding9.setId("G010");
         boarding9.setTitle(getResources().getString(R.string.question10));
+        boarding9.setScreenImg(R.drawable.icon_diagnosa);
 
         Question boarding10 = new Question();
-        boarding10.setNo("Pertanyaan 11");
+        boarding10.setNo("Pertanyaan 10");
         boarding10.setId("G011");
         boarding10.setTitle(getResources().getString(R.string.question11));
+        boarding10.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding11 = new Question();
-        boarding11.setNo("Pertanyaan 12");
+        boarding11.setNo("Pertanyaan 11");
         boarding11.setId("G012");
         boarding11.setTitle(getResources().getString(R.string.question12));
+        boarding11.setScreenImg(R.drawable.icon_diagnosa);
 
         Question boarding12 = new Question();
-        boarding12.setNo("Pertanyaan 13");
+        boarding12.setNo("Pertanyaan 12");
         boarding12.setId("G013");
         boarding12.setTitle(getResources().getString(R.string.question13));
+        boarding12.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding13 = new Question();
-        boarding13.setNo("Pertanyaan 14");
+        boarding13.setNo("Pertanyaan 13");
         boarding13.setId("G014");
         boarding13.setTitle(getResources().getString(R.string.question14));
+        boarding13.setScreenImg(R.drawable.icon_diagnosa);
 
         Question boarding14 = new Question();
-        boarding14.setNo("Pertanyaan 15");
+        boarding14.setNo("Pertanyaan 14");
         boarding14.setId("G015");
         boarding14.setTitle(getResources().getString(R.string.question15));
+        boarding14.setScreenImg(R.drawable.womanwithbaby);
 
         Question boarding15 = new Question();
-        boarding15.setNo("Pertanyaan 16");
+        boarding15.setNo("Pertanyaan 15");
         boarding15.setId("G016");
         boarding15.setTitle(getResources().getString(R.string.question16));
+        boarding15.setScreenImg(R.drawable.icon_diagnosa);
 
         onBoardingItems.add(boarding);
         onBoardingItems.add(boarding1);
@@ -208,7 +223,7 @@ public class QuestionActivity extends AppCompatActivity implements HomeContract 
         onBoardingItems.add(boarding3);
         onBoardingItems.add(boarding4);
         onBoardingItems.add(boarding5);
-        onBoardingItems.add(boarding6);
+//        onBoardingItems.add(boarding6);
         onBoardingItems.add(boarding7);
         onBoardingItems.add(boarding8);
         onBoardingItems.add(boarding9);

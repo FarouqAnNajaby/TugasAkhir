@@ -14,9 +14,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.babycare.R;
 import com.example.babycare.databinding.FragmentHomeBinding;
+import com.example.babycare.helper.DbHelper;
 import com.example.babycare.ui.login.LoginActivity;
 import com.example.babycare.ui.main.home.baby.BabyActivity;
 import com.example.babycare.ui.register.RegisterActivity;
+import com.example.babycare.utils.Constanta;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 
@@ -24,11 +26,14 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     Intent intent;
+    DbHelper helper;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        helper = new DbHelper(requireContext());
+        binding.tvAyo.setText("Halo Bunda "+helper.getString(Constanta.PREF_NAME));
 
         binding.btnStart.setOnClickListener(v->{
             showDialog();
@@ -47,6 +52,8 @@ public class HomeFragment extends Fragment {
         View view = getLayoutInflater().inflate(R.layout.bottom_sheet_rules, null);
         Button btnStart = view.findViewById(R.id.btn_next);
         ImageView btnClose = view.findViewById(R.id.btn_close);
+
+
 
         BottomSheetDialog dialog = new BottomSheetDialog(requireContext(),R.style.AppBottomSheetDialogTheme);
         dialog.setContentView(view);

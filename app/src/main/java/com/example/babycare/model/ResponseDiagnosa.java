@@ -17,6 +17,17 @@ public class ResponseDiagnosa{
 	@SerializedName("uuid")
 	private String uuid;
 
+	@SerializedName("date")
+	private String date;
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
 	public void setStatusCode(int statusCode){
 		this.statusCode = statusCode;
 	}
