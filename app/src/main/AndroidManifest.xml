@@ -22,7 +22,7 @@
             android:name=".ui.main.home.hasil.HasilActvity"
             android:exported="false" />
         <activity
-            android:name=".ui.main.home.baby.AddBabyActivity"
+            android:name=".ui.main.home.baby.AddUpdateBabyActivity"
             android:exported="false" />
         <activity
             android:name=".ui.main.home.baby.BabyActivity"

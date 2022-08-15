@@ -16,10 +16,7 @@ import com.example.babycare.helper.DbHelper;
 import com.example.babycare.model.Baby;
 import com.example.babycare.model.ResponseGetBaby;
 import com.example.babycare.ui.main.home.adapter.BabyAdapter;
-import com.example.babycare.ui.main.home.baby.presenter.BabyPresenter;
-import com.example.babycare.ui.main.home.hasil.HasilActvity;
 import com.example.babycare.utils.Constanta;
-import com.example.babycare.utils.Loading;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.util.ArrayList;
@@ -75,11 +72,11 @@ public class BabyActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void gotoAdd(){
-        Intent intent = new Intent(this, AddBabyActivity.class);
+        Intent intent = new Intent(this, AddUpdateBabyActivity.class);
         startActivity(intent);
     }
 
-    private void getListBaby() {
+    public void getListBaby() {
 
         dialog.show();
         binding.rvListBaby.setVisibility(View.GONE);
@@ -94,12 +91,16 @@ public class BabyActivity extends AppCompatActivity implements View.OnClickListe
                     dialog.dismiss();
                     if (response.body().getKode() == 1){
                         if (response.body().getData() != null){
-                            binding.rvListBaby.setVisibility(View.VISIBLE);
-                            babyList = response.body().getData();
-                            Log.i("cek", String.valueOf(babyList.size()));
-                            adapter = new BabyAdapter(BabyActivity.this, babyList);
-                            binding.rvListBaby.setAdapter(adapter);
-                            adapter.notifyDataSetChanged();
+                            if (response.body().getData().size() > 0){
+                                binding.rvListBaby.setVisibility(View.VISIBLE);
+                                babyList = response.body().getData();
+                                Log.i("cek", String.valueOf(babyList.size()));
+                                adapter = new BabyAdapter(BabyActivity.this, babyList);
+                                binding.rvListBaby.setAdapter(adapter);
+                                adapter.notifyDataSetChanged();
+                            }else {
+                                binding.layoutEmpty.setVisibility(View.VISIBLE);
+                            }
                         }
                         else {
                             dialog.dismiss();
@@ -139,5 +140,4 @@ public class BabyActivity extends AppCompatActivity implements View.OnClickListe
         });
         dialog.show();
     }
-
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.home.baby.AddBabyActivity">
+    tools:context=".ui.main.home.baby.AddUpdateBabyActivity">
 
     <ImageView
         android:id="@+id/img_icon"
@@ -77,6 +77,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title_laki"
                 android:paddingStart="10dp"
+                android:checked="true"
                 android:paddingEnd="20dp"
                 android:onClick="onRadioButtonClicked"
                 android:background="@drawable/bg_radius_top_20dp_white"/>

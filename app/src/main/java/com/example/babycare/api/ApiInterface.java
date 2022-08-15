@@ -17,6 +17,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.QueryMap;
 
 public interface ApiInterface {
@@ -96,5 +97,12 @@ public interface ApiInterface {
     @GET("destroy-baby")
     Call<ResponseDiagnosa> toDeleteBaby(
             @QueryMap Map<String, String> options
+    );
+
+    @Headers({"Content-Type: application/json", "X-Requested-With: XMLHttpRequest"})
+    @PUT("update-baby")
+    Call<UserResponse> toUpdateBaby(
+            @QueryMap Map<String, String> options,
+            @Body Baby baby
     );
 }

@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,14 +15,10 @@ import com.example.babycare.api.ApiClient;
 import com.example.babycare.databinding.ItemBabyBinding;
 import com.example.babycare.model.Baby;
 import com.example.babycare.model.ResponseDiagnosa;
-import com.example.babycare.ui.main.history.adapter.GejalaAdapter;
-import com.example.babycare.ui.main.history.adapter.HistoryAdapter;
-import com.example.babycare.ui.main.history.adapter.SolusiAdapter;
-import com.example.babycare.ui.main.home.hasil.HasilActvity;
+import com.example.babycare.ui.main.home.baby.AddUpdateBabyActivity;
 import com.example.babycare.ui.main.home.question.QuestionActivity;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -74,13 +70,32 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.MyViewHolder> 
                 }
             });
             holder.binding.btnDelete.setOnClickListener(v->{
-                dialog = new SweetAlertDialog(context, SweetAlertDialog.WARNING_TYPE);
-                dialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
-                dialog.setTitleText("Apakah anda yakin?");
-                dialog.setConfirmClickListener(sweetAlertDialog -> delete(data.getIdBaby()));
-                dialog.setCancelable(false);
-                dialog.show();
+                new SweetAlertDialog(context, SweetAlertDialog.WARNING_TYPE)
+                        .setTitleText("Apakah anda yakin ingin menghapus?")
+                        .setCancelText("Tidak")
+                        .setConfirmText("Ya")
+                        .setCancelClickListener(SweetAlertDialog::dismissWithAnimation)
+                        .setConfirmClickListener(sweetAlertDialog -> {
+                            delete(data.getIdBaby());
+                            babyList.remove(position);
+                            notifyItemRemoved(position);
+                            notifyItemRangeChanged(position, babyList.size());
+                            new SweetAlertDialog(context,SweetAlertDialog.SUCCESS_TYPE)
+                                    .setTitleText("Balita")
+                                    .setContentText("Berhasil dihapus")
+                                    .show();
+                                    sweetAlertDialog.dismiss();
+                        })
+                        .show();
+
             });
+            holder.binding.btnEdit.setOnClickListener(v->{
+                Intent intent = new Intent(context, AddUpdateBabyActivity.class);
+                intent.putExtra(AddUpdateBabyActivity.EXTRA_BABY, data);
+                intent.putExtra(AddUpdateBabyActivity.LABEL,"edit");
+                context.startActivity(intent);
+            });
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -99,6 +114,7 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.MyViewHolder> 
             this.binding = binding;
         }
     }
+
     private void delete(String id){
 
         Map<String, String> data = new HashMap<>();
